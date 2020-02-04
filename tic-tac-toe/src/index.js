@@ -75,7 +75,7 @@ class Game extends React.Component {
   jumpto(step) {
     this.setState({
       stepNumber: step,
-      xIsNext: (step % 2 == 0),
+      xIsNext: (step % 2 === 0),
     });
   }
   
@@ -97,7 +97,7 @@ class Game extends React.Component {
 
     let status;
     if (winner) {
-      status = 'Winner: ' + winner;
+      status = '' +winner + ' wins!!!'
     } else {
       status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
     }
